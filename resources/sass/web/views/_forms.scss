@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/products
+ * -----------------------------------------------------------------------------
+ */
+
+.form {
+  margin-top: $space-xl;
+
+  h2 {
+    @include font-size($fs-md);
+    @include font-light();
+    margin-bottom: $space-sm;
+  }
+
+  h3 {
+    margin-bottom: $space-sm;
+  }
+}

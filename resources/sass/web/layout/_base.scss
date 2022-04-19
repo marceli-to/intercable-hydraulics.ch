@@ -1,0 +1,32 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/base
+ * -----------------------------------------------------------------------------
+ */
+
+html {
+	overflow-y: scroll;
+
+	&.has-menu {
+		main {
+			visibility: hidden;
+		}
+	}
+}
+
+
+body {
+	color: $color-secondary;
+	@include font-smoothing();
+	@include font-light();
+	@include font-size($fs-sm);
+	position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+// Scrollbars
+@include scrollbar(4px, #eee);

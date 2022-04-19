@@ -1,0 +1,39 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/footer
+ * -----------------------------------------------------------------------------
+ */
+
+footer.site-footer {
+  background-color: $color-light-grey;
+  color: $color-secondary;
+  @include font-light();
+  
+  > div {
+    @extend %inner-block;
+    @include font-size($fs-xxs);
+    padding-bottom: $space-md;
+    padding-top: $space-md;
+
+    a {
+      color: $color-secondary;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    p {
+      margin-bottom: 0 !important;
+    }
+
+    .copy {
+    
+      svg {
+        @extend %is-responsive;
+        max-width: 200px;
+        margin: 10px 0 15px 0;
+      }
+    }
+  }
+}
