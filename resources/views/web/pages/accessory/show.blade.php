@@ -16,8 +16,8 @@
       <article>
         <div class="grid-3x1">
           <div>
-            @if ($accessory->article_no && $accessory->article_no != 'tbd')
-              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$accessory->article_no}}</p>
+            @if ($accessory->e_no)
+              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$accessory->e_no}}</p>
             @endif
             @if ($accessory->description)
               <h3>{{__('page.heading-technical-data')}}</h3>

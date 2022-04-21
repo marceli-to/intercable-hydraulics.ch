@@ -18,8 +18,8 @@
       <article>
         <div class="grid-3x1">
           <div>
-            @if ($tool->article_no && $tool->article_no != 'tbd')
-              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$tool->article_no}}</p>
+            @if ($tool->e_no)
+              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$tool->e_no}}</p>
             @endif
             @if ($tool->description)
               <h3>{{__('page.heading-technical-data')}}</h3>

@@ -17,6 +17,7 @@ class Consumable extends Base
 
 	protected $fillable = [
 		'article_no',
+    'e_no',
 		'title',
 		'subtitle',
 		'description',

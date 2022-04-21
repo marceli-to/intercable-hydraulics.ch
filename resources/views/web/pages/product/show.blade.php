@@ -32,7 +32,9 @@
       <article>
         <div class="grid-3x1">
           <div>
-            @if ($product->article_no && $product->article_no != 'tbd')
+            @if ($product->e_no)
+              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$product->e_no}}</p>
+            @elseif ($product->article_no)
               <p><strong>{{__('page.label-enumber')}}</strong><br>{{$product->article_no}}</p>
             @endif
             @if ($product->description)

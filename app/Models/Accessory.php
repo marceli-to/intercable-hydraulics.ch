@@ -17,6 +17,7 @@ class Accessory extends Base
 
 	protected $fillable = [
 		'article_no',
+    'e_no',
 		'title',
 		'subtitle',
 		'description',

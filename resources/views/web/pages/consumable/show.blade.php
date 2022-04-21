@@ -16,8 +16,8 @@
       <article>
         <div class="grid-3x1">
           <div>
-            @if ($consumable->article_no && $consumable->article_no != 'tbd')
-              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$consumable->article_no}}</p>
+            @if ($consumable->e_no)
+              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$consumable->e_no}}</p>
             @endif
             @if ($consumable->description)
               <h3>{{__('page.heading-technical-data')}}</h3>
