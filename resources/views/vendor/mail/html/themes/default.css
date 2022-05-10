@@ -35,7 +35,7 @@ blockquote {
 }
 
 a {
-  color: #009EE3;
+  color: #e3051b;
 }
 
 a img {
@@ -45,7 +45,7 @@ a img {
 /* Typography */
 
 h1 {
-  color: #009EE3;
+  color: #e3051b;
   font-size: 20px;
   line-height: 26px;
   font-weight: normal;
@@ -56,7 +56,7 @@ h1 {
 }
 
 p {
-  color: #4D5869;
+  color: #303c4a;
   font-size: 14px;
   line-height: 18px;
   margin-top: 0;
@@ -161,7 +161,7 @@ img {
 }
 
 .footer p {
-  color: #4D5869;
+  color: #303c4a;
   font-size: 12px;
   text-align: center;
 }
