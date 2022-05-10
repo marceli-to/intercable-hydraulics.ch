@@ -1,10 +1,10 @@
 @component('mail::layout')
 {{-- Header --}}
-@slot('header')
+{{-- @slot('header')
 @component('mail::header', ['url' => config('app.url')])
 {{ config('app.name') }}
 @endcomponent
-@endslot
+@endslot --}}
 
 {{-- Body --}}
 {{ $slot }}
