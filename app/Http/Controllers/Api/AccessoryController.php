@@ -64,11 +64,15 @@ class AccessoryController extends Controller
         'fr' => $request->input('description.fr'),
         'it' => $request->input('description.it'),
       ],
-
       'link_shop' => [
         'de' => $request->input('link_shop.de'),
         'fr' => $request->input('link_shop.fr'),
         'it' => $request->input('link_shop.it'),
+      ],
+      'link_shop_em' => [
+        'de' => $request->input('link_shop_em.de'),
+        'fr' => $request->input('link_shop_em.fr'),
+        'it' => $request->input('link_shop_em.it'),
       ],
       'diameter' => $request->input('diameter'),
       'accessory_category_id' => $request->input('accessory_category_id'),
@@ -131,18 +135,21 @@ class AccessoryController extends Controller
     $accessory->setTranslation('subtitle', 'de', $request->input('subtitle.de'));
     $accessory->setTranslation('description', 'de', $request->input('description.de'));
     $accessory->setTranslation('link_shop', 'de', $request->input('link_shop.de'));
+    $accessory->setTranslation('link_shop_em', 'de', $request->input('link_shop_em.de'));
 
     // French
     $accessory->setTranslation('title', 'fr', $request->input('title.fr'));
     $accessory->setTranslation('subtitle', 'fr', $request->input('subtitle.fr'));
     $accessory->setTranslation('description', 'fr', $request->input('description.fr'));
     $accessory->setTranslation('link_shop', 'fr', $request->input('link_shop.fr'));
+    $accessory->setTranslation('link_shop_em', 'fr', $request->input('link_shop_em.fr'));
 
     // Italian
     $accessory->setTranslation('title', 'it', $request->input('title.it'));
     $accessory->setTranslation('subtitle', 'it', $request->input('subtitle.it'));
     $accessory->setTranslation('description', 'it', $request->input('description.it'));
     $accessory->setTranslation('link_shop', 'it', $request->input('link_shop.it'));
+    $accessory->setTranslation('link_shop_em', 'it', $request->input('link_shop_em.it'));
 
     $accessory->article_no = $request->input('article_no');
     $accessory->diameter = $request->input('diameter');

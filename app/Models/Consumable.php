@@ -13,6 +13,7 @@ class Consumable extends Base
 		'subtitle',
 		'description',
 		'link_shop',
+    'link_shop_em',
 	];
 
 	protected $fillable = [
@@ -23,6 +24,7 @@ class Consumable extends Base
 		'description',
 		'drilling',
 		'link_shop',
+    'link_shop_em',
 		'order',
 		'publish',
 		'has_variation',

@@ -38,7 +38,10 @@
           <label>Link Shop</label>
           <input type="text" v-model="accessory.link_shop.de">
         </div>
-
+        <div class="form-row">
+          <label>Link Shop</label>
+          <input type="text" v-model="tool.link_shop_em.de">
+        </div>
         <div class="form-row">
           <label>Kategorie</label>
           <div class="select-wrapper">
@@ -119,6 +122,10 @@
           <label>Link Shop</label>
           <input type="text" v-model="accessory.link_shop.fr">
         </div>
+        <div class="form-row">
+          <label>Link Shop</label>
+          <input type="text" v-model="tool.link_shop_em.fr">
+        </div>
       </div>
     </div>
     <div v-show="tabs.translation_it.active">
@@ -142,6 +149,10 @@
         <div class="form-row">
           <label>Link Shop</label>
           <input type="text" v-model="accessory.link_shop.it">
+        </div>
+        <div class="form-row">
+          <label>Link Shop</label>
+          <input type="text" v-model="tool.link_shop_em.it">
         </div>
       </div>
     </div>
@@ -238,6 +249,11 @@ export default {
           it: null
         },
         link_shop: {
+          de: null,
+          fr: null,
+          it: null
+        },
+        link_shop_em: {
           de: null,
           fr: null,
           it: null

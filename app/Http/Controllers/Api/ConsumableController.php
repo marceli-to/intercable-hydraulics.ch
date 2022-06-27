@@ -64,11 +64,15 @@ class ConsumableController extends Controller
         'fr' => $request->input('description.fr'),
         'it' => $request->input('description.it'),
       ],
-
       'link_shop' => [
         'de' => $request->input('link_shop.de'),
         'fr' => $request->input('link_shop.fr'),
         'it' => $request->input('link_shop.it'),
+      ],
+      'link_shop_em' => [
+        'de' => $request->input('link_shop_em.de'),
+        'fr' => $request->input('link_shop_em.fr'),
+        'it' => $request->input('link_shop_em.it'),
       ],
       'drilling' => $request->input('drilling'),
       'consumable_category_id' => $request->input('consumable_category_id'),

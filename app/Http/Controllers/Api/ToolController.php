@@ -64,11 +64,15 @@ class ToolController extends Controller
         'fr' => $request->input('description.fr'),
         'it' => $request->input('description.it'),
       ],
-
       'link_shop' => [
         'de' => $request->input('link_shop.de'),
         'fr' => $request->input('link_shop.fr'),
         'it' => $request->input('link_shop.it'),
+      ],
+      'link_shop_em' => [
+        'de' => $request->input('link_shop_em.de'),
+        'fr' => $request->input('link_shop_em.fr'),
+        'it' => $request->input('link_shop_em.it'),
       ],
       'publish' => $request->input('publish'),
     ]);
@@ -129,18 +133,21 @@ class ToolController extends Controller
     $tool->setTranslation('subtitle', 'de', $request->input('subtitle.de'));
     $tool->setTranslation('description', 'de', $request->input('description.de'));
     $tool->setTranslation('link_shop', 'de', $request->input('link_shop.de'));
+    $tool->setTranslation('link_shop_em', 'de', $request->input('link_shop_em.de'));
 
     // French
     $tool->setTranslation('title', 'fr', $request->input('title.fr'));
     $tool->setTranslation('subtitle', 'fr', $request->input('subtitle.fr'));
     $tool->setTranslation('description', 'fr', $request->input('description.fr'));
     $tool->setTranslation('link_shop', 'fr', $request->input('link_shop.fr'));
+    $tool->setTranslation('link_shop_em', 'fr', $request->input('link_shop_em.fr'));
 
     // Italian
     $tool->setTranslation('title', 'it', $request->input('title.it'));
     $tool->setTranslation('subtitle', 'it', $request->input('subtitle.it'));
     $tool->setTranslation('description', 'it', $request->input('description.it'));
     $tool->setTranslation('link_shop', 'it', $request->input('link_shop.it'));
+    $tool->setTranslation('link_shop_em', 'it', $request->input('link_shop_em.it'));
 
     $tool->article_no = $request->input('article_no');
     $tool->publish = $request->input('publish');

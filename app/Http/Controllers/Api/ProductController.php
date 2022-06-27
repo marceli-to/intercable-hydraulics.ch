@@ -89,6 +89,11 @@ class ProductController extends Controller
         'fr' => $request->input('link_shop.fr'),
         'it' => $request->input('link_shop.it'),
       ],
+      'link_shop_em' => [
+        'de' => $request->input('link_shop_em.de'),
+        'fr' => $request->input('link_shop_em.fr'),
+        'it' => $request->input('link_shop_em.it'),
+      ],
       'product_category_id' => $request->input('product_category_id'),
       'publish' => $request->input('publish'),
     ]);
@@ -138,6 +143,7 @@ class ProductController extends Controller
     $product->setTranslation('code_3d', 'de', $request->input('code_3d.de'));
     $product->setTranslation('caption_3d', 'de', $request->input('caption_3d.de'));
     $product->setTranslation('link_shop', 'de', $request->input('link_shop.de'));
+    $product->setTranslation('link_shop_em', 'de', $request->input('link_shop_em.de'));
 
     // French
     $product->setTranslation('subtitle', 'fr', $request->input('subtitle.fr'));
@@ -148,6 +154,7 @@ class ProductController extends Controller
     $product->setTranslation('code_3d', 'fr', $request->input('code_3d.fr'));
     $product->setTranslation('caption_3d', 'fr', $request->input('caption_3d.fr'));
     $product->setTranslation('link_shop', 'fr', $request->input('link_shop.fr'));
+    $product->setTranslation('link_shop_em', 'fr', $request->input('link_shop_em.fr'));
 
     // Italian
     $product->setTranslation('subtitle', 'it', $request->input('subtitle.it'));
@@ -158,6 +165,7 @@ class ProductController extends Controller
     $product->setTranslation('code_3d', 'it', $request->input('code_3d.it'));
     $product->setTranslation('caption_3d', 'it', $request->input('caption_3d.it'));
     $product->setTranslation('link_shop', 'it', $request->input('link_shop.it'));
+    $product->setTranslation('link_shop_em', 'it', $request->input('link_shop_em.it'));
 
     $product->title = $request->input('title');
     $product->article_no = $request->input('article_no');

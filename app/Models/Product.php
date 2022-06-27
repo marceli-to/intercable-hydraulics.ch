@@ -17,6 +17,7 @@ class Product extends Base
 		'code_3d',
 		'caption_3d',
 		'link_shop',
+    'link_shop_em',
 	];
 
 	protected $fillable = [
@@ -31,6 +32,7 @@ class Product extends Base
 		'code_3d',
 		'caption_3d',
 		'link_shop',
+    'link_shop_em',
 		'has_variation',
 		'order',
 		'publish',
