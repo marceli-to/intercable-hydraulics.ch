@@ -39,7 +39,7 @@
           <input type="text" v-model="consumable.link_shop.de">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (EM)</label>
           <input type="text" v-model="consumable.link_shop_em.de">
         </div>
         <div class="form-row">
@@ -123,7 +123,7 @@
           <input type="text" v-model="consumable.link_shop.fr">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (EM)</label>
           <input type="text" v-model="consumable.link_shop_em.fr">
         </div>
       </div>
@@ -151,7 +151,7 @@
           <input type="text" v-model="consumable.link_shop.it">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (EM)</label>
           <input type="text" v-model="consumable.link_shop_em.it">
         </div>
       </div>
