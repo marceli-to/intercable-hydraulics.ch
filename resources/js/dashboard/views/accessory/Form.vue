@@ -40,7 +40,7 @@
         </div>
         <div class="form-row">
           <label>Link Shop</label>
-          <input type="text" v-model="tool.link_shop_em.de">
+          <input type="text" v-model="accessory.link_shop_em.de">
         </div>
         <div class="form-row">
           <label>Kategorie</label>
@@ -124,7 +124,7 @@
         </div>
         <div class="form-row">
           <label>Link Shop</label>
-          <input type="text" v-model="tool.link_shop_em.fr">
+          <input type="text" v-model="accessory.link_shop_em.fr">
         </div>
       </div>
     </div>
@@ -152,7 +152,7 @@
         </div>
         <div class="form-row">
           <label>Link Shop</label>
-          <input type="text" v-model="tool.link_shop_em.it">
+          <input type="text" v-model="accessory.link_shop_em.it">
         </div>
       </div>
     </div>
