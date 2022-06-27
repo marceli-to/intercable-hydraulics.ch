@@ -150,7 +150,7 @@
             :restrictions="'jpg, png | max. 8 MB'"
             :maxFiles="99"
             :maxFilesize="8"
-            :acceptedFiles="'.png,.jpg'"
+            :acceptedFiles="'.png,.jpg,.jpeg'"
           ></image-upload>
         </div>
         <div class="form-row">
