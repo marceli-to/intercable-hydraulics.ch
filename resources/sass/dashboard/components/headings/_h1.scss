@@ -11,4 +11,16 @@ h1 {
   @include letter-spacing();
   @include responsive-prop('margin-bottom', $space-sm);
   text-transform: uppercase;
+
+  &.page-title {
+    @include font-bold();
+    @include font-size($fs-lg);
+    margin-bottom: 0 !important;
+    letter-spacing: normal;
+    em {
+      @include font-light();
+      display: block;
+      text-transform: none;
+    }
+  }
 }
