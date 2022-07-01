@@ -25,12 +25,12 @@
             @endif
           </div>
         </div>
-        {{-- @if ($consumable->link_shop)
+        {{-- @if ($consumable->link_shop_em)
           <div class="product__shop">
             <hr>
             <h3>{{__('page.heading-order-product')}}</h3>
             <div class="product__shop-buttons">
-              <a href="{{$consumable->link_shop}}" target="_blank" class="btn-primary">
+              <a href="{{$consumable->link_shop_em}}" target="_blank" class="btn-primary">
                 {{__('page.button-store')}}
               </a>
             </div>
