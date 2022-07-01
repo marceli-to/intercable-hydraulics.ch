@@ -37,24 +37,26 @@ class AccessoryController extends BaseController
         $query->where('product_id', '=', $productId);
     })->get();
 
-    $accessoryVariants =$this->accessory
+    $accessoryVariants = $this->accessory
       ->with('previewImage')
       ->where('accessory_category_id', '=', $accessoryCategory->id)
       ->where('has_variation', '=', 1)
       ->where('publish', '=', 1)
       ->whereHas('products', function ($query) use ($productId) {
         $query->where('product_id', '=', $productId);
-    })->get();
+    })->orderBy('order')->get();
 
     $accessoriesWithVariants = [];
     if ($accessoryVariants)
     {
       foreach($accessoryVariants as $variation)
       {
-        $accessoriesWithVariants['title'] = $variation->title;
         $accessoriesWithVariants['items'][] = $variation;
       }
     }
+
+    $accessoriesWithVariants['title_first'] = $accessoryVariants->first()->title;
+    $accessoriesWithVariants['title_last'] = $accessoryVariants->last()->title;
 
     return view($this->viewPath . 'listing', ['accessories' => $accessories, 'accessoriesWithVariants' => $accessoriesWithVariants, 'category' => $accessoryCategory, 'product' => $product]);
   }

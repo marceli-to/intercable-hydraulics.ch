@@ -8,6 +8,7 @@ return [
   'label-max-strength' => 'Seleziona la sezione',
   'label-max-diameter' => 'Seleziona la sezione',
   'label-press-area' => 'Seleziona la sezione',
+  'label-to' => 'a',
   'label-show-all' => 'Mostra tutti i prodotti',
   'label-select' => 'Seleziona',
   'label-products' => 'Prodotto',

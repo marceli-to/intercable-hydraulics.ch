@@ -5,6 +5,7 @@ return [
   'claim-byline' => '<span>Le <a href="https://www.intercable.tools/de/i-verpressung" target="_blank" rel="noopener">sertissage intelligent</a> d\'Intercable.</span>',
   'label-diameter' => 'Choisir la section',
   'label-press-area' => 'Choisir la section',
+  'label-to' => 'à',
   'label-max-strength' => 'Choisir la section',
   'label-max-diameter' => 'Choisir la section',
   'label-drilling' => 'Choisir la section',

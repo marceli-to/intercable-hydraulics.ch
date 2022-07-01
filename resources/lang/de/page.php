@@ -5,6 +5,7 @@ return [
   'claim-byline' => '<span>Die <a href="https://www.intercable.tools/de/i-verpressung" target="_blank" rel="noopener">intelligente Verpressung</a> von Intercable.<br>(Alle Produkte für Wehrtechnik und Kerntechnik zugelassen)</span>',
   'label-diameter' => 'Durchmesser:',
   'label-press-area' => 'Pressbereich:',
+  'label-to' => 'bis',
   'label-max-strength' => 'max. Materialstärke:',
   'label-max-diameter' => 'max. Kabeldurchmesser:',
   'label-drilling' => 'Bohrung:',

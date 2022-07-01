@@ -50,14 +50,19 @@
         @endforeach
       @endif
       @if ($accessoriesWithVariants)
-        <div class="product-card is-portrait">
+        <div class="product-card {{ $accessoriesWithVariants['items'][0]->previewImage->orientation == 'p' ? 'is-portrait' : 'is-landscape' }}">
+          @if ($accessoriesWithVariants['items'][0]->previewImage->orientation == 'l')
+            <h2>{{ $accessoriesWithVariants['title_first'] }} <strong>{{__('page.label-to')}}</strong> {{ $accessoriesWithVariants['title_last'] }}</h2>
+          @endif
           <figure>
             @if ($accessoriesWithVariants['items'][0]->previewImage)
               {!! ImageHelper::large($accessoriesWithVariants['items'][0]->previewImage, $accessoriesWithVariants['items'][0]->previewImage->caption) !!}
             @endif
           </figure>
           <div>
-            <h2>{{ $accessoriesWithVariants['items'][0]->title }}</h2>
+          @if ($accessoriesWithVariants['items'][0]->previewImage->orientation == 'p')
+            <h2>{{ $accessoriesWithVariants['title_first'] }} <strong>{{__('page.label-to')}}</strong> {{ $accessoriesWithVariants['title_last'] }}</h2>
+          @endif
             <p>
               @if ($accessoriesWithVariants['items'])
                 <div class="select-wrapper">

@@ -51,7 +51,7 @@
           <input type="text" v-model="product.caption_3d.de">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (Sonepar)</label>
           <input type="text" v-model="product.link_shop.de">
         </div>
         <div class="form-row">
@@ -111,7 +111,7 @@
           <input type="text" v-model="product.caption_3d.fr">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (Sonepar)</label>
           <input type="text" v-model="product.link_shop.fr">
         </div>
         <div class="form-row">
@@ -155,7 +155,7 @@
           <input type="text" v-model="product.caption_3d.it">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (Sonepar)</label>
           <input type="text" v-model="product.link_shop.it">
         </div>
         <div class="form-row">

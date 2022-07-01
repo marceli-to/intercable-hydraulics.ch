@@ -35,7 +35,7 @@
           <input type="text" v-model="accessory.diameter">
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (Sonepar)</label>
           <input type="text" v-model="accessory.link_shop.de">
         </div>
         <div class="form-row">
@@ -119,7 +119,7 @@
           ></tinymce-editor>
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (Sonepar)</label>
           <input type="text" v-model="accessory.link_shop.fr">
         </div>
         <div class="form-row">
@@ -147,7 +147,7 @@
           ></tinymce-editor>
         </div>
         <div class="form-row">
-          <label>Link Shop</label>
+          <label>Link Shop (Sonepar)</label>
           <input type="text" v-model="accessory.link_shop.it">
         </div>
         <div class="form-row">
