@@ -27,7 +27,7 @@
             @endif
           </div>
         </div>
-        {{-- @if ($tool->link_shop_em)
+        @if ($tool->link_shop_em)
           <div class="product__shop">
             <hr>
             <h3>{{__('page.heading-order-product')}}</h3>
@@ -37,7 +37,7 @@
               </a>
             </div>
           </div>
-        @endif --}}
+        @endif
         @if ($tool->publishedImages->count() > 0)
           <hr>
           <div class="product__images">
