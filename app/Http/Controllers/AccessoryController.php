@@ -55,9 +55,12 @@ class AccessoryController extends BaseController
       }
     }
 
-    $accessoriesWithVariants['items'] = collect($accessoriesWithVariants['items'])->sortBy('diameter');
-    $accessoriesWithVariants['title_first'] = $accessoryVariants->first()->title;
-    $accessoriesWithVariants['title_last'] = $accessoryVariants->last()->title;
+    if (isset($accessoriesWithVariants['items']))
+    {
+      $accessoriesWithVariants['items'] = collect($accessoriesWithVariants['items'])->sortBy('diameter');
+      $accessoriesWithVariants['title_first'] = $accessoryVariants->first()->title;
+      $accessoriesWithVariants['title_last'] = $accessoryVariants->last()->title;
+    }
 
     return view($this->viewPath . 'listing', ['accessories' => $accessories, 'accessoriesWithVariants' => $accessoriesWithVariants, 'category' => $accessoryCategory, 'product' => $product]);
   }
