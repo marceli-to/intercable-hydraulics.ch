@@ -58,8 +58,8 @@ class AccessoryController extends BaseController
     if (isset($accessoriesWithVariants['items']))
     {
       $accessoriesWithVariants['items'] = collect($accessoriesWithVariants['items'])->sortBy('diameter');
-      $accessoriesWithVariants['title_first'] = $accessoryVariants->first()->title;
-      $accessoriesWithVariants['title_last'] = $accessoryVariants->last()->title;
+      $accessoriesWithVariants['title_first'] = $accessoriesWithVariants['items']->first()->title;
+      $accessoriesWithVariants['title_last'] = $accessoriesWithVariants['items']->last()->title;
     }
 
     return view($this->viewPath . 'listing', ['accessories' => $accessories, 'accessoriesWithVariants' => $accessoriesWithVariants, 'category' => $accessoryCategory, 'product' => $product]);
