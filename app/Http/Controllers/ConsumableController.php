@@ -44,15 +44,32 @@ class ConsumableController extends BaseController
         $query->where('product_id', '=', $productId);
     })->get();
 
+    // $consumablesWithVariants = [];
+    // if ($consumableVariants)
+    // {
+    //   foreach($consumableVariants as $variation)
+    //   {
+    //     $consumablesWithVariants['title'] = $variation->title;
+    //     $consumablesWithVariants['items'][] = $variation;
+    //   }
+    // }
+
     $consumablesWithVariants = [];
     if ($consumableVariants)
     {
       foreach($consumableVariants as $variation)
       {
-        $consumablesWithVariants['title'] = $variation->title;
         $consumablesWithVariants['items'][] = $variation;
       }
     }
+
+    if (isset($consumablesWithVariants['items']))
+    {
+      $consumablesWithVariants['items'] = collect($consumablesWithVariants['items'])->sortBy('diameter');
+      $consumablesWithVariants['title_first'] = $consumablesWithVariants['items']->first()->title;
+      $consumablesWithVariants['title_last'] = $consumablesWithVariants['items']->last()->title;
+    }
+
 
     return view($this->viewPath . 'listing', ['consumables' => $consumables, 'consumablesWithVariants' => $consumablesWithVariants, 'category' => $consumableCategory, 'product' => $product]);
   }

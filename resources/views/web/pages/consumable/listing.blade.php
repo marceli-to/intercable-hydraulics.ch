@@ -49,20 +49,26 @@
           @endif
         @endforeach
       @endif
+
       @if ($consumablesWithVariants)
-        <div class="product-card is-portrait">
+        <div class="product-card {{ $consumablesWithVariants['items'][0]->previewImage->orientation == 'p' ? 'is-portrait' : 'is-landscape' }}">
+          @if ($consumablesWithVariants['items'][0]->previewImage->orientation == 'l')
+            <h2>{{ $consumablesWithVariants['title_first'] }} <strong>{{__('page.label-to')}}</strong> {{ $consumablesWithVariants['title_last'] }}</h2>
+          @endif
           <figure>
             @if ($consumablesWithVariants['items'][0]->previewImage)
               {!! ImageHelper::large($consumablesWithVariants['items'][0]->previewImage, $consumablesWithVariants['items'][0]->previewImage->caption) !!}
             @endif
           </figure>
           <div>
-            <h2>{{ $consumablesWithVariants['items'][0]->title }}</h2>
+          @if ($consumablesWithVariants['items'][0]->previewImage->orientation == 'p')
+            <h2>{{ $consumablesWithVariants['title_first'] }} <strong>{{__('page.label-to')}}</strong> {{ $consumablesWithVariants['title_last'] }}</h2>
+          @endif
             <p>
               @if ($consumablesWithVariants['items'])
                 <div class="select-wrapper">
                   <select class="js-product-dd">
-                    <option>{{__('page.label-drilling')}}</option>
+                    <option>{{__('page.label-press-area')}}</option>
                     @foreach($consumablesWithVariants['items'] as $item)
                       <option value="{{ localized_route('page.consumable.show', ['slug' => AppHelper::slug($item->title), 'consumable' => $item->id]) }}">
                         {{$item->drilling}} mm2
@@ -75,6 +81,7 @@
           </div>
         </div>
       @endif
+
     </div>
   </div>
 </section>
