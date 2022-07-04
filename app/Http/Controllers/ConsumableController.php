@@ -44,16 +44,6 @@ class ConsumableController extends BaseController
         $query->where('product_id', '=', $productId);
     })->get();
 
-    // $consumablesWithVariants = [];
-    // if ($consumableVariants)
-    // {
-    //   foreach($consumableVariants as $variation)
-    //   {
-    //     $consumablesWithVariants['title'] = $variation->title;
-    //     $consumablesWithVariants['items'][] = $variation;
-    //   }
-    // }
-
     $consumablesWithVariants = [];
     if ($consumableVariants)
     {
