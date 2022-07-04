@@ -55,7 +55,7 @@ class ConsumableController extends BaseController
 
     if (isset($consumablesWithVariants['items']))
     {
-      $consumablesWithVariants['items'] = collect($consumablesWithVariants['items'])->sortBy('diameter');
+      $consumablesWithVariants['items'] = collect($consumablesWithVariants['items'])->sortBy('drilling');
       $consumablesWithVariants['title_first'] = $consumablesWithVariants['items']->first()->title;
       $consumablesWithVariants['title_last'] = $consumablesWithVariants['items']->last()->title;
     }
