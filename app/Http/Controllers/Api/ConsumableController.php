@@ -135,18 +135,21 @@ class ConsumableController extends Controller
     $consumable->setTranslation('subtitle', 'de', $request->input('subtitle.de'));
     $consumable->setTranslation('description', 'de', $request->input('description.de'));
     $consumable->setTranslation('link_shop', 'de', $request->input('link_shop.de'));
+    $consumable->setTranslation('link_shop_em', 'de', $request->input('link_shop_em.de'));
 
     // French
     $consumable->setTranslation('title', 'fr', $request->input('title.fr'));
     $consumable->setTranslation('subtitle', 'fr', $request->input('subtitle.fr'));
     $consumable->setTranslation('description', 'fr', $request->input('description.fr'));
     $consumable->setTranslation('link_shop', 'fr', $request->input('link_shop.fr'));
+    $consumable->setTranslation('link_shop_em', 'fr', $request->input('link_shop_em.fr'));
 
     // Italian
     $consumable->setTranslation('title', 'it', $request->input('title.it'));
     $consumable->setTranslation('subtitle', 'it', $request->input('subtitle.it'));
     $consumable->setTranslation('description', 'it', $request->input('description.it'));
     $consumable->setTranslation('link_shop', 'it', $request->input('link_shop.it'));
+    $consumable->setTranslation('link_shop_em', 'it', $request->input('link_shop_em.it'));
 
     $consumable->drilling = $request->input('drilling');
     $consumable->article_no = $request->input('article_no');
