@@ -21,7 +21,7 @@
           {{ c.title.de }}
             <separator />
             <span v-for="p in c.products" :key="p.id">
-              {{ p.title }}
+              {{ p.title }}&nbsp;
             </span>
         </div>
         <list-actions 
