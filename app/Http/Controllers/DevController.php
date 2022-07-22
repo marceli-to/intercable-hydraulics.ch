@@ -17,14 +17,21 @@ class DevController extends BaseController
 
   public function copy()
   { 
-    // Products
-    $products = Product::get();
-    foreach($products as $p)
+    // Accessory
+    $data = Accessory::get();
+    foreach($data as $d)
     {
-      $p->e_no = $p->article_no;
-      $p->save();
+      $d->e_no = $d->article_no;
+      $d->save();
     }
-    dd($products);
+    // Consumable
+    $data = Consumable::get();
+    foreach($data as $d)
+    {
+      $d->e_no = $d->article_no;
+      $d->save();
+    }
+    dd('d');
   }
 
 }
