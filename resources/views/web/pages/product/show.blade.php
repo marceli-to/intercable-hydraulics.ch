@@ -34,8 +34,8 @@
           <div>
             @if ($product->e_no)
               <p><strong>{{__('page.label-enumber')}}</strong><br>{{$product->e_no}}</p>
-            @elseif ($product->article_no)
-              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$product->article_no}}</p>
+            {{-- @elseif ($product->article_no)
+              <p><strong>{{__('page.label-enumber')}}</strong><br>{{$product->article_no}}</p> --}}
             @endif
             @if ($product->description)
               <h3>{{__('page.heading-technical-data')}}</h3>

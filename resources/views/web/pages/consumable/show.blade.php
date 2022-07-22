@@ -5,7 +5,7 @@
 <section>
   <div>
     <header class="product-header">
-      <h1>{{$consumable->title}}<br><em>{{ $consumable->article_no }}</em></h1>
+      <h1>{{$consumable->title}}<br><em>{{ $consumable->e_no }}</em></h1>
       <a href="javascript:;" class="btn-back js-btn-back">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#303c4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
         <span>{{__('page.label-overview')}}</span>
