@@ -37,13 +37,13 @@ class UploadController extends Controller
     $name = $this->sanitize(trim($file->getClientOriginalName()));
     $name = $this->prefix . uniqid()  . '_' . $name;
 
-    $file2 = $request->file('file');
-    $file2->copy('/home/tools/hydraulic-tools.ch/storage/app/public/uploads', $name);
+    //$file2 = $request->file('file');
+    //$file2->copy('/home/tools/hydraulic-tools.ch/storage/app/public/uploads', $name);
 
     $file->move($this->upload_path, $name);
     $filetype = \File::extension($this->upload_path . $name);
 
-
+    File::copy($this->upload_path . '/' . $name, '/home/tools/hydraulic-tools.ch/storage/app/public/uploads/' . $name);
 
     $image_types = ['jpg', 'jpeg', 'png'];
     $orientation = '';
