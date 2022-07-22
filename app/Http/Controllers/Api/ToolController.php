@@ -49,6 +49,7 @@ class ToolController extends Controller
     // Store tool
     $tool = new Tool([
       'article_no' => $request->input('article_no'),
+      'e_no' => $request->input('e_no'),
       'title' => [
         'de' => $request->input('title.de'),
         'fr' => $request->input('title.fr'),
@@ -150,6 +151,7 @@ class ToolController extends Controller
     $tool->setTranslation('link_shop_em', 'it', $request->input('link_shop_em.it'));
 
     $tool->article_no = $request->input('article_no');
+    $tool->e_no = $request->input('e_no');
     $tool->publish = $request->input('publish');
     $tool->save();
 

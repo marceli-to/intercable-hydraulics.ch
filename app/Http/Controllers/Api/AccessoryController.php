@@ -49,6 +49,7 @@ class AccessoryController extends Controller
     // Store accessory
     $accessory = new Accessory([
       'article_no' => $request->input('article_no'),
+      'e_no' => $request->input('e_no'),
       'title' => [
         'de' => $request->input('title.de'),
         'fr' => $request->input('title.fr'),
@@ -152,6 +153,7 @@ class AccessoryController extends Controller
     $accessory->setTranslation('link_shop_em', 'it', $request->input('link_shop_em.it'));
 
     $accessory->article_no = $request->input('article_no');
+    $accessory->e_no = $request->input('e_no');
     $accessory->diameter = $request->input('diameter');
     $accessory->publish = $request->input('publish');
     $accessory->accessory_category_id = $request->input('accessory_category_id');

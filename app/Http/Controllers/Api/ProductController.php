@@ -48,6 +48,7 @@ class ProductController extends Controller
     // Store product
     $product = new Product([
       'article_no' => $request->input('article_no'),
+      'e_no' => $request->input('e_no'),
       'title' => $request->input('title'),
       'subtitle' => [
         'de' => $request->input('subtitle.de'),
@@ -169,6 +170,8 @@ class ProductController extends Controller
 
     $product->title = $request->input('title');
     $product->article_no = $request->input('article_no');
+    $product->e_no = $request->input('e_no');
+
     $product->publish = $request->input('publish');
     $product->product_category_id = $request->input('product_category_id');
     $product->save();

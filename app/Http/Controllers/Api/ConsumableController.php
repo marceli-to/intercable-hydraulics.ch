@@ -49,6 +49,7 @@ class ConsumableController extends Controller
     // Store consumable
     $consumable = new Consumable([
       'article_no' => $request->input('article_no'),
+      'e_no' => $request->input('e_no'),
       'title' => [
         'de' => $request->input('title.de'),
         'fr' => $request->input('title.fr'),
@@ -153,6 +154,8 @@ class ConsumableController extends Controller
 
     $consumable->drilling = $request->input('drilling');
     $consumable->article_no = $request->input('article_no');
+    $consumable->e_no = $request->input('e_no');
+
     $consumable->publish = $request->input('publish');
     $consumable->consumable_category_id = $request->input('consumable_category_id');
     $consumable->save();
