@@ -9,7 +9,7 @@
     <div v-show="tabs.data.active">
       <div>
         <div :class="[this.errors.article_no ? 'has-error' : '', 'form-row']">
-          <label>Artikelnummer*</label>
+          <label>Hersteller-Artikelnummer *</label>
           <input type="text" v-model="consumable.article_no">
           <label-required />
         </div>
