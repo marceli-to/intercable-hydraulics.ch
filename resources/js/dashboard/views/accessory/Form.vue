@@ -13,6 +13,10 @@
           <input type="text" v-model="accessory.article_no">
           <label-required />
         </div>
+        <div class="form-row">
+          <label>E-Nummer *</label>
+          <input type="text" v-model="accessory.e_no">
+        </div>
         <div :class="[this.errors.title ? 'has-error' : '', 'form-row']">
           <label>Titel*</label>
           <input type="text" v-model="accessory.title.de">
@@ -233,6 +237,7 @@ export default {
       // Model
       accessory: {
         article_no: null,
+        e_no: null,
         title: {
           de: null,
           fr: null,
