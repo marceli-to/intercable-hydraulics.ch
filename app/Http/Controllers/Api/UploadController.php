@@ -46,7 +46,7 @@ class UploadController extends Controller
     {
       $img = \Image::make(storage_path('app/public/uploads/') . $name);
 
-      $img2 = \Image::make('/home/tools/hydraulic-tools.ch/storage/app/public/' . $name);
+      $img2 = \Image::make('/home/tools/hydraulic-tools.ch/storage/app/public/uploads/' . $name);
       $orientation = $img->width() >= $img->height() ? 'l' : 'p';
     }
     
