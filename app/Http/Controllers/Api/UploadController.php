@@ -40,7 +40,7 @@ class UploadController extends Controller
     $filetype = \File::extension($this->upload_path . $name);
 
     $file2 = $request->file('file');
-    $file2->move('/home/tools/hydraulic-tools.ch/storage/app/public/uploads/', $name);
+    $file2->move('/home/tools/hydraulic-tools.ch/storage/app/public/uploads', $name);
 
     $image_types = ['jpg', 'jpeg', 'png'];
     $orientation = '';
