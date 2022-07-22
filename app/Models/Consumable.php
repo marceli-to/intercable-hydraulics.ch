@@ -23,6 +23,7 @@ class Consumable extends Base
 		'subtitle',
 		'description',
 		'drilling',
+    'unit',
 		'link_shop',
     'link_shop_em',
 		'order',

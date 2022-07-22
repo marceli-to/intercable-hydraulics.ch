@@ -14,7 +14,7 @@ class AlterProductsTableAddLinkShopEm extends Migration
     public function up()
     {
       Schema::table('products', function (Blueprint $table) {
-        $table->text('link_shop_em')->after('link_shop')->nullable();
+        //$table->text('link_shop_em')->after('link_shop')->nullable();
       });
     }
 

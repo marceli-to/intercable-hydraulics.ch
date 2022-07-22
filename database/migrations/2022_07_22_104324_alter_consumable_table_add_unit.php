@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterToolsTableAddLinkShopEm extends Migration
+class AlterConsumableTableAddUnit extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AlterToolsTableAddLinkShopEm extends Migration
      */
     public function up()
     {
-      Schema::table('tools', function (Blueprint $table) {
-        //$table->text('link_shop_em')->after('link_shop')->nullable();
+      Schema::table('consumables', function (Blueprint $table) {
+        $table->text('unit')->after('drilling')->nullable();
       });
     }
 

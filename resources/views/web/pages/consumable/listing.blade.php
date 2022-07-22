@@ -71,7 +71,7 @@
                     <option>{{__('page.label-press-area')}}</option>
                     @foreach($consumablesWithVariants['items'] as $item)
                       <option value="{{ localized_route('page.consumable.show', ['slug' => AppHelper::slug($item->title), 'consumable' => $item->id]) }}">
-                        {{$item->drilling}} mm2
+                        {{$item->drilling}} {{ $item->unit ? $item->unit : 'mm2' }}
                       </option>
                     @endforeach
                   </select>

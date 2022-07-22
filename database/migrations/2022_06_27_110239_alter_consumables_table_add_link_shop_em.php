@@ -14,7 +14,7 @@ class AlterConsumablesTableAddLinkShopEm extends Migration
     public function up()
     {
       Schema::table('consumables', function (Blueprint $table) {
-        $table->text('link_shop_em')->after('link_shop')->nullable();
+       // $table->text('link_shop_em')->after('link_shop')->nullable();
       });
     }
 
