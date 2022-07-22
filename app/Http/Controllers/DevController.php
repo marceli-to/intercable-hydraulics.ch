@@ -1,6 +1,5 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\Tool;
 use App\Models\Accessory;
 use App\Models\Consumable;
 use App\Models\Product;
@@ -20,6 +19,11 @@ class DevController extends BaseController
   { 
     // Products
     $products = Product::get();
+    foreach($products as $p)
+    {
+      $p->e_no = $p->article_no;
+      $p->save();
+    }
     dd($products);
   }
 
