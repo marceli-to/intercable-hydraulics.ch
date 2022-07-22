@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dev/copy', 'DevController@copy');
+
+
 // Auth routes
 Auth::routes(['verify' => true, 'register' => false]);
 Route::get('/logout', 'Auth\LoginController@logout');
