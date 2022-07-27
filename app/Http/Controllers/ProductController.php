@@ -85,7 +85,6 @@ class ProductController extends BaseController
       }
     }
     
-
     return view(
       $this->viewPath . 'show',
       [

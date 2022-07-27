@@ -53,7 +53,6 @@
           </div>
         @endif
 
-
         @if ($consumable->publishedImages->count() > 0)
           <hr>
           <h3>{{__('page.heading-product-images')}}</h3>
