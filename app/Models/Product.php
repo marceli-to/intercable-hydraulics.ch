@@ -34,6 +34,7 @@ class Product extends Base
 		'link_shop',
     'link_shop_em',
 		'has_variation',
+    'form_data',
 		'order',
 		'publish',
 		'product_category_id'

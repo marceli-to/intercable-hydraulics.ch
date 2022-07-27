@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/dev/copy', 'DevController@copy');
 
+// dev route
+Route::get('/update-product-form-data', 'PageController@updateFormData');
+
+
 
 // Auth routes
 Auth::routes(['verify' => true, 'register' => false]);

@@ -38,6 +38,23 @@
             </div>
           </div>
         @endif
+
+        @if (isset($api_connection['hookurl']))
+          <div class="product__shop">
+            <hr>
+            <h3>{{__('page.heading-order-product')}}</h3>
+            <div class="product__shop-buttons">
+              <form action="{{ $api_connection['hookurl'] }}" method="post" target="_blank" enctype="multipart/form-data"> 
+                <input type="hidden" name="version" value="{{ $api_connection['version'] }}"/>
+                <input type="hidden" name="country" value="{{ $api_connection['country'] }}"/>
+                <input type="hidden" name="language" value="{{ $api_connection['language'] }}"/>
+                <input type="hidden" name="result" value="{{ $tool->form_data }}"/>
+                <input type="submit" value="{{__('page.button-store')}}" class="btn-primary">
+              </form>
+            </div>
+          </div>
+        @endif
+
         @if ($tool->publishedImages->count() > 0)
           <hr>
           <div class="product__images">

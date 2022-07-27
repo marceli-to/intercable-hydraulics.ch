@@ -76,7 +76,11 @@ class AccessoryController extends BaseController
   public function show($slug = NULL, Accessory $accessory)
   { 
     $accessory = $this->accessory->with('previewImage', 'category', 'publishedImages', )->findOrFail($accessory->id);
-    return view($this->viewPath . 'show', ['accessory' => $accessory]);
+    return view($this->viewPath . 'show', [
+      'accessory' => $accessory,
+       'api_connection' => session()->has('api_connection_data') ? session('api_connection_data') : null
+      ]
+    );
   }
 
 }

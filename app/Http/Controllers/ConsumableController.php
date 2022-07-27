@@ -75,7 +75,12 @@ class ConsumableController extends BaseController
   public function show($slug = NULL, Consumable $consumable)
   { 
     $consumable = $this->consumable->with('previewImage', 'category', 'publishedImages', )->findOrFail($consumable->id);
-    return view($this->viewPath . 'show', ['consumable' => $consumable]);
+    return view($this->viewPath . 'show', 
+      [
+        'consumable' => $consumable,
+        'api_connection' => session()->has('api_connection_data') ? session('api_connection_data') : null
+      ]
+    );
   }
 
 }

@@ -29,7 +29,8 @@ class Consumable extends Base
 		'order',
 		'publish',
 		'has_variation',
-		'consumable_category_id'
+    'form_data',
+    'consumable_category_id'
   ];
   
 	public function images()

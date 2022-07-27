@@ -84,8 +84,18 @@ class ProductController extends BaseController
         $tools[] = $c;
       }
     }
+    
 
-    return view($this->viewPath . 'show', ['product' => $product, 'accessories' => $accessories, 'consumables' => $consumables, 'tools' => $tools]);
+    return view(
+      $this->viewPath . 'show',
+      [
+        'product' => $product, 
+        'accessories' => $accessories, 
+        'consumables' => $consumables, 
+        'tools' => $tools,
+        'api_connection' => session()->has('api_connection_data') ? session('api_connection_data') : null
+      ]
+    );
   }
 
 }

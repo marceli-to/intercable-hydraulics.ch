@@ -28,6 +28,7 @@ class Accessory extends Base
 		'order',
 		'publish',
 		'has_variation',
+    'form_data',
 		'accessory_category_id'
   ];
   

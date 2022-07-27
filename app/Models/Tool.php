@@ -25,6 +25,7 @@ class Tool extends Base
 		'diameter',
 		'link_shop',
     'link_shop_em',
+    'form_data',
 		'order',
 		'publish',
   ];

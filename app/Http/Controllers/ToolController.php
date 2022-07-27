@@ -26,7 +26,12 @@ class ToolController extends BaseController
   public function show($slug = NULL, Tool $tool)
   { 
     $tool = $this->tool->with('previewImage', 'publishedImages')->findOrFail($tool->id);
-    return view($this->viewPath . 'show', ['tool' => $tool]);
+    return view($this->viewPath . 'show', 
+      [
+        'tool' => $tool,
+        'api_connection' => session()->has('api_connection_data') ? session('api_connection_data') : null
+      ]
+    );
   }
 
 }
