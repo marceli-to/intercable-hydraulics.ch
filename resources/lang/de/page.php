@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'claim' => 'IMMER WIEDER INTELLIGENT<br><em>i-Verpressung</em>',
+  'claim' => 'IMMER WIEDER INTELLIGENT<br><em>w-Verpressung</em>',
   'claim-byline' => '<span>Die <a href="https://www.intercable.tools/de/i-verpressung" target="_blank" rel="noopener">intelligente Verpressung</a> von Intercable.<br>(Alle Produkte für Wehrtechnik und Kerntechnik zugelassen)</span>',
   'label-diameter' => 'Durchmesser:',
   'label-press-area' => 'Pressbereich:',
