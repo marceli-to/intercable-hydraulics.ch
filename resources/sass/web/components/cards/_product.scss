@@ -36,7 +36,6 @@
     @include font-size($fs-xxs);
   }
 
-
   &.is-portrait {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -99,10 +98,17 @@
     }
   }
 
-
   &:hover {
     border: 2px solid transparent;
     box-shadow: 1px 1px 12px 0 rgba(153, 153, 153, .25);
+
+    &.is-selected {
+      box-shadow: none
+    }
+  }
+
+  &.is-selected {
+    border: 2px solid $color-primary;
   }
   
   .btn-primary {

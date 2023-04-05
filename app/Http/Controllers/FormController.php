@@ -4,10 +4,13 @@ use App\Models\Product;
 use App\Http\Requests\CallbackFormRequest;
 use App\Http\Requests\TrainingFormRequest;
 use App\Http\Requests\PresentationFormRequest;
+use App\Http\Requests\RentFormRequest;
 use App\Mail\CallbackUser;
 use App\Mail\CallbackOwner;
 use App\Mail\TrainingUser;
 use App\Mail\TrainingOwner;
+use App\Mail\RentFormUser;
+use App\Mail\RentFormOwner;
 use App\Mail\PresentationUser;
 use App\Mail\PresentationOwner;
 use Illuminate\Support\Facades\Mail;
@@ -105,6 +108,35 @@ class FormController extends BaseController
     $data = $request->all();
     Mail::to($data['email'])->send(new PresentationUser($data));
     Mail::to(\Config::get('custom.email.recipient'))->send(new PresentationOwner($data));
+    return $this->thankYou(\App::getLocale());
+  }
+
+  /**
+   * Page: 'Rent product'
+   * 
+   * @return \Illuminate\Http\Response
+   */
+
+   public function rent()
+   { 
+      // Get products by article no
+      $products = $this->product->with('previewImage', 'category', 'publishedImages')->whereIn('article_no', ['983222152', '983222042'])->get();
+      return view($this->viewPath . 'rent', ['products' => $products]);
+   }
+ 
+   /**
+    * Page: 'Rent product submit'
+    *
+    * @param  \Illuminate\Http\Request $request
+    * @return \Illuminate\Http\Response
+    */
+ 
+  public function rentSubmit(RentFormRequest $request)
+  { 
+    $data = $request->all();
+    $data['product'] = $this->product->find($data['product_id']);
+    Mail::to($data['email'])->send(new RentFormUser($data));
+    Mail::to(\Config::get('custom.email.recipient'))->send(new RentFormOwner($data));
     return $this->thankYou(\App::getLocale());
   }
 

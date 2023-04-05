@@ -49,7 +49,20 @@ select {
 textarea {
 	height: 150px;
 }
- 
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=time] {
+  &.is-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    margin-top: 5px;
+  }
+}
+
 select {
 	appearance: none;
 	border: none;

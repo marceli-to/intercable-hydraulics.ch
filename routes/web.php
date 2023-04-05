@@ -53,6 +53,10 @@ Route::multilingual('contact-training-submit', 'FormController@trainingSubmit')-
 Route::multilingual('contact-presentation', 'FormController@presentation')->name('page.forms.presentation');
 Route::multilingual('contact-presentation-submit', 'FormController@presentationSubmit')->name('page.forms.presentation.submit')->method('post');
 
+// Form - Rent
+Route::multilingual('product-rent', 'FormController@rent')->name('page.forms.rent');
+Route::multilingual('product-rent-submit', 'FormController@rentSubmit')->name('page.forms.rent.submit')->method('post');
+
 // Form - Thank you
 Route::multilingual('thank-you', 'FormController@thankYou')->name('page.forms.thankyou');
 

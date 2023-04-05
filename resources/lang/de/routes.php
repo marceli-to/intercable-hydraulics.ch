@@ -15,5 +15,7 @@ return [
   'contact-training-submit' => 'kontakt/schulung/senden',
   'contact-presentation' => 'kontakt/praesentation/{slug?}/{product?}',
   'contact-presentation-submit' => 'kontakt/praesentation/senden',
+  'product-rent' => 'miete/produkt',
+  'product-rent-submit' => 'miete/produkt/senden',
   'thank-you' => 'kontakt/danke'
 ];
