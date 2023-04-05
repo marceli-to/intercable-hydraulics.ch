@@ -117,13 +117,13 @@ class FormController extends BaseController
    * @return \Illuminate\Http\Response
    */
 
-   public function rent()
-   { 
-      // Get products by article no
-      $products = $this->product->with('previewImage', 'category', 'publishedImages')->whereIn('article_no', ['983222152', '983222042'])->get();
-      return view($this->viewPath . 'rent', ['products' => $products]);
-   }
- 
+  public function rent()
+  { 
+    // Get products by article no
+    $products = $this->product->with('previewImage', 'category', 'publishedImages')->whereIn('e_no', ['983222152', '983222042'])->get();
+    return view($this->viewPath . 'rent', ['products' => $products]);
+  }
+
    /**
     * Page: 'Rent product submit'
     *
