@@ -85,8 +85,8 @@
               <x-text-field label="{{__('page.label-form-rent-end-date')}} *" type="text" name="date-end" css="is-disabled js-input-date-end" />
             </div>
             <h2>{{__('page.label-form-personal-details')}}</h2>
-            <x-text-field label="{{__('page.form-label-name')}} *" type="text" name="name" css="js-error-name" />
             <x-text-field label="{{__('page.form-label-firstname')}} *" type="text" name="firstname" css="js-error-firstname" />
+            <x-text-field label="{{__('page.form-label-name')}} *" type="text" name="name" css="js-error-name" />
             <x-text-field label="{{__('page.form-label-company')}} *" type="text" name="company" css="js-error-company" />
             <x-text-field label="{{__('page.form-label-phone')}} *" type="text" name="phone" css="js-error-phone" />
             <x-text-field label="{{__('page.form-label-email')}} *" type="email" name="email" css="js-error-email" />
