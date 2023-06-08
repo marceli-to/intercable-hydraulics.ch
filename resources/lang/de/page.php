@@ -54,7 +54,7 @@ return [
   'text-form-training-individual-trainings' => 'Bevorzugen Sie für sich und Ihr Team (minimum 10 Personen) eine individuelle Schulung, benützen Sie bitte untenstehendes Formular. Ihre Daten werden nur von den beteiligten Unternehmen verwendet und nicht an Dritte weitergegeben.',
   'heading-form-rent' => 'Produkte mieten',
   'heading-form-rent-byline' => 'Mieten Sie ein Produkt aus unserer Produktepalette',
-  'text-form-rent-product' => 'Aktuell stehen die Produkte <strong>Stilo60</strong> oder <strong>APV 60</strong> zur Verfügung. Indiquez-nous vos coordonnées et des informations sur la période souhaitée et nous vous contacterons dans les plus brefs délais pour discuter de plus de détails.',
+  'text-form-rent-product' => 'Aktuell stehen die Produkte <strong>Stilo60</strong> oder <strong>APV 60</strong> zur Verfügung. Geben Sie uns Ihre Kontaktdaten und Informationen über den gewünschten Zeitraum an und wir werden uns so bald wie möglich mit Ihnen in Verbindung setzen, um weitere Einzelheiten zu besprechen.',
   'heading-form-rent-select-product' => 'Produkt wählen',
   'heading-form-rent-periode' => 'Angaben zur Mietdauer',
   'label-form-rent-periode' => 'Mietdauer',
