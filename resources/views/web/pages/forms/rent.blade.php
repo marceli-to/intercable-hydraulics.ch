@@ -22,7 +22,7 @@
             <div class="products">
               <input type="hidden" name="product_id" value="">
               @foreach($products as $product)
-                @if ($product->previewImage->orientation == 'p')
+                @if ($product->previewImage && $product->previewImage->orientation == 'p')
                   <div class="product-card is-portrait"  class="">
                     <figure>
                       @if ($product->previewImage)

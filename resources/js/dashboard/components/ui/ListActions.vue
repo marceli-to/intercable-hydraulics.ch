@@ -94,6 +94,11 @@ export default {
       default: false
     },
 
+    isDraggable: {
+      type: Boolean,
+      default: false
+    },
+
     routes: Object,
     record: Object,
   },
@@ -101,6 +106,10 @@ export default {
   methods: {
 
     toggle(id,$event) {
+      if (this.isDraggable) {
+        this.$parent.$parent.toggle(id,$event);
+        return;
+      }
       this.$parent.toggle(id,$event);
     },
 

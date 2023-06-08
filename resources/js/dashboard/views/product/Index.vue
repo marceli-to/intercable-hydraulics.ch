@@ -33,6 +33,7 @@
           <list-actions 
             :id="p.id" 
             :record="p"
+            :isDraggable="true"
             :routes="{edit: 'product-edit'}">
           </list-actions>
         </div>

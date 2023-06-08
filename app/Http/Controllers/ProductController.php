@@ -26,7 +26,7 @@ class ProductController extends BaseController
 
   public function listing($slug = NULL, ProductCategory $productCategory)
   { 
-    $products = $this->product->published()->with('previewImage')->where('product_category_id', '=', $productCategory->id)->get();
+    $products = $this->product->published()->with('previewImage')->where('product_category_id', '=', $productCategory->id)->orderBy('order')->get();
     
     // Fetch additional category for "Lochsägen, Aufnahmeschaft, Zentrierbohrer" which belongs to "Stanz- und Biegewerkzeuge"
     $productCategoryHoleSaw = [];

@@ -8,7 +8,7 @@
     @if ($products)
       <div class="products">
         @foreach($products as $product)
-          @if ($product->previewImage->orientation == 'p')
+          @if ($product->previewImage && $product->previewImage->orientation == 'p')
             <div class="product-card is-portrait">
               <figure>
                 @if ($product->previewImage)
