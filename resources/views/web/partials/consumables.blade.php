@@ -7,7 +7,8 @@
         <h3>{{$group[0]->category->title}}</h3>
         <figure>
           @if ($group[0]->previewImage)
-            <img src="/assets/img/{{$group[0]->category->image}}" width="210" height="620" alt="{{$group[0]->category->title}}">
+            {!! ImageHelper::large($group[0]->previewImage, $group[0]->previewImage->caption) !!}
+            {{-- <img src="/assets/img/{{$group[0]->category->image}}" width="210" height="620" alt="{{$group[0]->category->title}}"> --}}
           @endif
         </figure>
         <div>
