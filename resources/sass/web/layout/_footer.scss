@@ -34,6 +34,17 @@ footer.site-footer {
         max-width: 200px;
         margin: 10px 0 15px 0;
       }
+
+      nav {
+        margin-top: $space-sm;
+        ul {
+          display: flex;
+          gap: $space-sm;
+        }
+        li {
+          display: block;
+        }
+      }
     }
   }
 }

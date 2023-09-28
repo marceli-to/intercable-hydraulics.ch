@@ -17,5 +17,7 @@ return [
   'contact-presentation-submit' => 'kontakt/praesentation/senden',
   'product-rent' => 'miete/produkt',
   'product-rent-submit' => 'miete/produkt/senden',
-  'thank-you' => 'kontakt/danke'
+  'thank-you' => 'kontakt/danke',
+  'privacy-policy' => 'datenschutzerklaerung',
+  'cookies' => 'cookies'
 ];
