@@ -32,7 +32,7 @@
   </li>
 </ol>
 <p>Einige Cookies können mehr als einen dieser Zwecke erfüllen.</p>
-<p><strong>Streng notwendige" </strong>Cookies ermöglichen es Ihnen, sich auf der Website zu bewegen und wichtige Funktionen wie sichere Bereiche zu nutzen. Ohne diese Cookies können wir die gewünschten Dienste nicht anbieten.</p>
+<p><strong>"Streng notwendige"</strong> Cookies ermöglichen es Ihnen, sich auf der Website zu bewegen und wichtige Funktionen wie sichere Bereiche zu nutzen. Ohne diese Cookies können wir die gewünschten Dienste nicht anbieten.</p>
 <p>Wir verwenden diese "Strictly Necessary"-Cookies, um:</p>
 <ul>
   <li>
@@ -49,7 +49,7 @@
   </li>
 </ul>
 <p>Wenn Sie diese Cookies verhindern, können wir nicht garantieren, wie die Website oder die Sicherheit auf der Website während Ihres Besuchs funktionieren wird.</p>
-<p><strong>Performance-Cookies</strong> sammeln Informationen darüber, wie Sie die Website nutzen, z. B. welche Seiten Sie besuchen und ob Sie Fehler feststellen. Diese Cookies sammeln keine Informationen, mit denen Sie identifiziert werden könnten. Sie werden nur verwendet, um die Funktionsweise der Website zu verbessern, die Interessen unserer Nutzer zu verstehen und die Wirksamkeit unserer Werbung zu messen.</p>
+<p><strong>"Performance-Cookies"</strong> sammeln Informationen darüber, wie Sie die Website nutzen, z. B. welche Seiten Sie besuchen und ob Sie Fehler feststellen. Diese Cookies sammeln keine Informationen, mit denen Sie identifiziert werden könnten. Sie werden nur verwendet, um die Funktionsweise der Website zu verbessern, die Interessen unserer Nutzer zu verstehen und die Wirksamkeit unserer Werbung zu messen.</p>
 <p>Wir verwenden Performance-Cookies, um:</p>
 <ul>
   <li>
@@ -69,7 +69,7 @@
   </li>
 </ul>
 <p>Einige unserer Performance-Cookies werden von Dritten für uns verwaltet.</p>
-<p><strong>Funktionalitäts-Cookies</strong> werden verwendet, um Dienste bereitzustellen oder Einstellungen zu speichern, um Ihren Besuch zu verbessern.</p>
+<p><strong>"Funktionalitäts-Cookies"</strong> werden verwendet, um Dienste bereitzustellen oder Einstellungen zu speichern, um Ihren Besuch zu verbessern.</p>
 <p>Wir verwenden "Funktionalitäts"-Cookies für folgende Zwecke:</p>
 <ul>
   <li>
