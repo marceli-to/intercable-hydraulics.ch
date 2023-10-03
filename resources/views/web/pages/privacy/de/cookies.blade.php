@@ -89,7 +89,7 @@
   </li>
 </ul>
 <p>Einige dieser Cookies werden von Drittanbietern für uns verwaltet</p>
-<p><strong>Targeting-Cookies </strong>werden verwendet, um Ihren Besuch auf der Website sowie auf anderen Websites, Apps und Online-Diensten zu verfolgen, einschließlich der Seiten, die Sie besucht haben, und der Links, denen Sie gefolgt sind, was es uns ermöglicht, Ihnen gezielte Werbung auf der Website anzuzeigen.</p>
+<p><strong>"Targeting-Cookies"</strong> werden verwendet, um Ihren Besuch auf der Website sowie auf anderen Websites, Apps und Online-Diensten zu verfolgen, einschließlich der Seiten, die Sie besucht haben, und der Links, denen Sie gefolgt sind, was es uns ermöglicht, Ihnen gezielte Werbung auf der Website anzuzeigen.</p>
 <p>Wir können Targeting-Cookies verwenden, um:</p>
 <ul>
   <li>
