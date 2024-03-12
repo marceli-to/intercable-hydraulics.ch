@@ -39,11 +39,11 @@
       @endif
       --}}
 
-      <a href="javascript:;" class="btn-cta js-btn-livechat">
+      {{-- <a href="javascript:;" class="btn-cta js-btn-livechat">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.5 17.25a12.57 12.57 0 0 1-1.35 5.7A12.751 12.751 0 0 1 18.75 30a12.57 12.57 0 0 1-5.7-1.35L4.5 31.5l2.85-8.55A12.57 12.57 0 0 1 6 17.25a12.75 12.75 0 0 1 7.05-11.4 12.57 12.57 0 0 1 5.7-1.35h.75a12.72 12.72 0 0 1 12 12v.75z" stroke="#E3051B" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div>{!!__('page.request-livechat-text')!!}</div>
       </a>
- 
+  --}}
       @if (request()->routeIs('*.page.product.show'))
         <a href="{{ localized_route('page.forms.training', ['slug' => AppHelper::slug($product->title), 'product' => $product->id ]) }}" class="btn-cta" title="{{__('page.request-training')}}">
           <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.5 6h-21a3 3 0 0 0-3 3v21a3 3 0 0 0 3 3h21a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3zM24 3v6M12 3v6M4.5 15h27" stroke="#E3051B" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
