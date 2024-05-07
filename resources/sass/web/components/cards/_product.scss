@@ -61,6 +61,67 @@
       @include font-light();
     }
 
+    &.is-teaser {
+      border: 2px solid $color-primary;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none !important;
+      position: relative;
+
+      @include bp-sm() {
+        flex-direction: row;
+      }
+
+      > div:not(.ribbon) {
+        @include bp-sm() {
+          padding: $space-lg $space-sm 0 $space-sm;
+        }
+      }
+
+      figure {
+        margin: $space-md auto $space-md auto;
+        min-width: 135px;
+
+        @include bp-sm() {
+          margin: $space-md 0 0 0;
+        }
+
+        img {
+          @extend %is-responsive;
+        }
+      }
+
+      p {
+        margin-bottom: $space-md;
+      }
+
+      h2, h3 {
+        color: $color-primary;
+      }
+
+      h3 {
+        @include font-size($fs-md);
+      }
+
+      .ribbon {
+        background-color: $color-primary;
+        color: $color-white;
+        position: absolute;
+        padding: 5px 10px;
+        @include font-bold();
+        right: 0;
+        top: 0;
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 12px 0 rgba($color-primary, .25);
+      }
+
+      figure {
+        width: 40%;
+      }
+    }
+
     &.is-portrait {
       display: grid;
       grid-template-columns: 1fr 3fr;

@@ -8,7 +8,26 @@
       {!!__('page.claim')!!}
       {!!__('page.claim-byline')!!}
     </h1>
-    <div class="products">
+    @if ($teaser)
+      <div class="product-teaser">
+        <a 
+          href="{{ localized_route('page.product.show', ['slug' => AppHelper::slug($teaser->subtitle), 'product' => $teaser->id]) }}"" 
+          class="product-card product-card--home is-teaser">
+          <div class="ribbon">{{ __('Tiefpreis') }}</div>
+          @if ($teaser->publishedImages->count() > 0)
+            <figure>
+              {!! ImageHelper::large($teaser->publishedImages->first()) !!}
+            </figure>
+            <div>
+              <h2><em>{{ __($teaser->title) }}</em></h2>
+              <p>{{ __('Werkzeugkoffer Set, zum schneiden, abisolieren, verpressen von Solarkabeln und PV-Steckern MC4') }}</p>
+              <h3>CHF 395.-</h3>
+            </div>
+          @endif
+        </a>
+      </div>
+    @endif
+    <div class="products {{ $teaser ? 'has-teaser' : '' }}">
       @if ($categories)
         @foreach($categories as $category)
           <div class="product-card product-card--home is-portrait">

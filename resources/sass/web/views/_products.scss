@@ -6,8 +6,24 @@
 
 $max-width: 980px;
 
+.product-teaser {
+  margin-top: $space-xl;
+  @include bp-sm() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $space-md;
+  }
+  @include bp-md() {
+    grid-column-gap: $space-xl;
+  }
+}
+
 .products {
   margin-top: $space-giga;
+
+  &.has-teaser {
+    margin-top: $space-xl;
+  }
 
   @include bp-sm() {
     display: grid;

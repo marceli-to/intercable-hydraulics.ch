@@ -1,33 +1,45 @@
 @extends('web.layout.app')
+@if ($product->category)
 @section('seo_title', $product->category->title_singular . ' ' . $product->title)
+@else
+@section('seo_title', $product->title)
+@endif
 @section('seo_description', '')
 @section('content')
 <section>
   <div>
     <header class="product-header">
-      @if ($product->category->id == 4)
-        <h1>
-          {{$product->subtitle}}<br>
-          <em>{{$product->title}}</em>
-        </h1>
-        <a href="javascript:;" class="btn-back js-btn-back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#303c4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <span>{{__('page.label-overview')}}</span>
-        </a>
+      @if ($product->category)
+        @if ($product->category->id == 4)
+          <h1>
+            {{$product->subtitle}}<br>
+            <em>{{$product->title}}</em>
+          </h1>
+          <a href="javascript:;" class="btn-back js-btn-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#303c4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>{{__('page.label-overview')}}</span>
+          </a>
+        @else
+          <h1>
+            {{$product->category->title_singular}}<br>
+            <em>{{$product->title}}</em>
+          </h1>
+          <a href="{{ localized_route('page.product.listing', ['slug' => $product->category->slug, 'productCategory' => $product->category->id]) }}" class="btn-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#303c4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>{{__('page.label-overview')}}</span>
+          </a>
+        @endif
       @else
-        <h1>
-          {{$product->category->title_singular}}<br>
-          <em>{{$product->title}}</em>
-        </h1>
-        <a href="{{ localized_route('page.product.listing', ['slug' => $product->category->slug, 'productCategory' => $product->category->id]) }}" class="btn-back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#303c4a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          <span>{{__('page.label-overview')}}</span>
-        </a>
+      <h1>
+        <em>{{ __($product->title) }}</em>
+      </h1>
       @endif
     </header>
     <div class="product">
-      @if ($product->category->id != 4)
+      @if ($product->category && $product->category->id != 4)
         <p>{!! str_replace('mm2', 'mm<sup>2</sup>', $product->subtitle) !!}</p>
+      @else 
+      <p>{{ $product->subtitle }}</p>
       @endif
       <article>
         <div class="grid-3x1">
@@ -123,7 +135,7 @@
             @endif
           </div>
         @endif
-        @if ($product->category->id == '1')
+        @if ($product->category && $product->category->id == '1')
           <hr>
           <h3>{!!__('page.heading-webinar-crimping-stripping')!!}</h3>
           <div class="product__media">
@@ -134,7 +146,7 @@
             </div>
           </div>
         @endif
-        @if ($product->category->id == '2')
+        @if ($product->category && $product->category->id == '2')
           <hr>
           <h3>{!!__('page.heading-webinar-sheet-perforation')!!}</h3>
           <div class="product__media">

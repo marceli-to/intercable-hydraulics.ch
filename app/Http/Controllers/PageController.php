@@ -40,7 +40,11 @@ class PageController extends BaseController
       session(['api_connection_data' => $data]);
     }
     $categories = $this->productCategory->with('products')->orderBy('order')->where('parent_id', '=', NULL)->get();
-    return view($this->viewPath . 'home', ['categories' => $categories]);
+
+    // Teaser
+    $teaser = $this->product->with('publishedImages')->find(29);
+
+    return view($this->viewPath . 'home', ['categories' => $categories, 'teaser' => $teaser]);
   }
 
   /**
