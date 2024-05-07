@@ -42,7 +42,7 @@ class PageController extends BaseController
     $categories = $this->productCategory->with('products')->orderBy('order')->where('parent_id', '=', NULL)->get();
 
     // Teaser
-    $teaser = $this->product->with('publishedImages')->find(29);
+    $teaser = $this->product->with('publishedImages')->find(30);
 
     return view($this->viewPath . 'home', ['categories' => $categories, 'teaser' => $teaser]);
   }
