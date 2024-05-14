@@ -55,18 +55,6 @@
             @endif
           </div>
         </div>
-        @if ($product->link_shop_em)
-          <div class="product__shop">
-            <hr>
-            <h3>{{__('page.heading-order-product')}}</h3>
-            <div class="product__shop-buttons">
-              <a href="{{$product->link_shop_em}}" target="_blank" class="btn-primary">
-                {{__('page.button-store')}}
-              </a>
-            </div>
-          </div>
-        @endif
-
         @if (isset($api_connection['hookurl']))
           <div class="product__shop">
             <hr>
@@ -77,10 +65,22 @@
                 <input type="hidden" name="country" value="{{ $api_connection['country'] }}"/>
                 <input type="hidden" name="language" value="{{ $api_connection['language'] }}"/>
                 <input type="hidden" name="result" value="{{ $product->form_data }}"/>
-                <input type="submit" value="{{__('page.button-store')}} (elbridge)" class="btn-primary">
+                <input type="submit" value="{{__('page.button-store')}}" class="btn-primary">
               </form>
             </div>
           </div>
+        @else
+          @if ($product->link_shop_em)
+            <div class="product__shop">
+              <hr>
+              <h3>{{__('page.heading-order-product')}}</h3>
+              <div class="product__shop-buttons">
+                <a href="{{$product->link_shop_em}}" target="_blank" class="btn-primary">
+                  {{__('page.button-store')}}
+                </a>
+              </div>
+            </div>
+          @endif
         @endif
 
         @if ($product->publishedImages->count() > 0)
