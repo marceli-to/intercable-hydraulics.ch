@@ -29,7 +29,6 @@
         <div class="form-row">
           <label>Technische Daten</label>
           <tinymce-editor
-            :api-key="tinyApiKey"
             :init="tinyConfig"
             v-model="accessory.description.de"
           ></tinymce-editor>
@@ -117,7 +116,6 @@
         <div class="form-row">
           <label>Technische Daten</label>
           <tinymce-editor
-            :api-key="tinyApiKey"
             :init="tinyConfig"
             v-model="accessory.description.fr"
           ></tinymce-editor>
@@ -145,7 +143,6 @@
         <div class="form-row">
           <label>Technische Daten</label>
           <tinymce-editor
-            :api-key="tinyApiKey"
             :init="tinyConfig"
             v-model="accessory.description.it"
           ></tinymce-editor>
